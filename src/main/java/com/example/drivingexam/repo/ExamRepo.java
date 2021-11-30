@@ -1,7 +1,7 @@
 package com.example.drivingexam.repo;
 
-import com.example.drivingexam.model.User;
+import com.example.drivingexam.model.Exam;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepo extends JpaRepository<User,Long> {
+public interface ExamRepo extends JpaRepository<Exam,Long> {
 }
