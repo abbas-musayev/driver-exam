@@ -14,6 +14,7 @@ import javax.persistence.*;
 @Table(name = "answer_history")
 public class QuestionHistory {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     Boolean isTrue;

@@ -4,20 +4,21 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
-import java.util.List;
 
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class Section {
+@Entity
+public class File {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String name;
+    String fileName;
+    String fileType;
+    @Lob
+    byte[] fileData;
 
-    @OneToMany
-    List<Question> questions;
 }

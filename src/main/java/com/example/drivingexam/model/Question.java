@@ -3,9 +3,7 @@ package com.example.drivingexam.model;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -15,10 +13,12 @@ import javax.persistence.ManyToOne;
 @Builder
 public class Question {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String photo_url;
-    String answer;
+    @OneToOne
+    File file;
 
+    String answer;
     @ManyToOne
     Section section;
 }
