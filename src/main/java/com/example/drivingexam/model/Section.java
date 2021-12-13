@@ -18,6 +18,6 @@ public class Section {
     Long id;
     String name;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     List<Question> questions;
 }

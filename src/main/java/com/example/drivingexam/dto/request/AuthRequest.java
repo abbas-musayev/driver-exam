@@ -8,12 +8,8 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class QuestionHistoryRequest {
-    Long id;
-    Boolean isTrue;
-    String answer;
+public class AuthRequest {
 
-    QuestionRequest questionDto;
-
-    ExamRequest examDto;
+    String username;
+    String password;
 }

@@ -1,21 +1,23 @@
-package com.example.drivingexam.dto.request;
+package com.example.drivingexam.dto.response;
 
+import com.example.drivingexam.model.Role;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.validation.constraints.Email;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class UserRequest {
+public class UserResponse {
+    Long id;
     String fullName;
     String username;
     String password;
-
-    @Email
     String email;
     String phone;
+
+    List<ExamResponse> exams;
 }

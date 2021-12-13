@@ -20,5 +20,7 @@ public class File {
     String fileType;
     @Lob
     byte[] fileData;
+    @OneToOne(cascade = CascadeType.ALL)
+    Question question;
 
 }

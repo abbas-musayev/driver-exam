@@ -22,11 +22,11 @@ public class Exam {
     @CreationTimestamp
     LocalDateTime createdDate;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     User user;
 
-    @OneToMany
-    List<QuestionHistory> questionHistories;
+    @OneToMany(cascade = CascadeType.ALL)
+    List<Question> questions;
 
 
 

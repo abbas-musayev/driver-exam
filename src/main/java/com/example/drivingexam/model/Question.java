@@ -15,10 +15,14 @@ public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    @OneToOne
+    String answer;
+
+    String name;
+
+    @OneToOne(cascade = CascadeType.ALL)
     File file;
 
-    String answer;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     Section section;
+
 }

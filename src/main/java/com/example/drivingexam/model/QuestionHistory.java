@@ -20,10 +20,10 @@ public class QuestionHistory {
     Boolean isTrue;
     String answer;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     Question question;
 
-    @OneToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     Exam exam;
 
 }

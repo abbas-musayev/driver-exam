@@ -12,9 +12,6 @@ import java.util.List;
 @Builder
 public class ExamRequest {
     Long id;
-    LocalDateTime createdDate;
-
-    UserRequest userDto;
-
-    List<QuestionHistoryRequest> questionHistoriesDto;
+    UserRequest user;
+    List<QuestionRequest> questions;
 }

@@ -10,8 +10,8 @@ import lombok.experimental.FieldDefaults;
 @Builder
 public class QuestionRequest {
     Long id;
-    String photo_url;
+    FileRequest file;
+    String name;
     String answer;
-
-    SectionRequest sectionDto;
+    SectionRequest section;
 }
